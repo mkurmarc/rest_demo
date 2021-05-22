@@ -57,7 +57,9 @@ app.get('/comments/new', (req, res) => {
 app.post('/comments', (req, res) => {
     const { username, comment } = req.body;
     comments.push({ username, comment, id: uuid() })
-    res.redirect('/comments');
+    res.redirect('/comments'); /* this sends a POST req, 302 status code, with header "/comments";
+                                then sends a GET req to "/comments"; basically, 2 different requests 
+                                happen very quickly  */
 })
 // *******************************************
 // SHOW - details about one particular comment
