@@ -1,4 +1,4 @@
-// This entire project will is perfect example of using REST
+// This entire project will is perfect example of using REST. It is like a template 
 const path = require('path');
 const methodOverride = require('method-override')
 const { v4: uuid } = require('uuid'); //For generating ID's
